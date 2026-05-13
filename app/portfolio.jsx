@@ -370,7 +370,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section className="section split" id="education" aria-labelledby="education-title">
+        <section className="section split education-section" id="education" aria-labelledby="education-title">
           <div className="section-heading sticky-heading reveal" data-effect="slide-right" data-reveal>
             <p className="eyebrow">Education</p>
             <h2 id="education-title">Environmental science foundations.</h2>
@@ -398,7 +398,6 @@ export default function Portfolio() {
           </div>
           <div className="feature-content">
             <p className="eyebrow">Water Sector</p>
-            <h2>Reflections from River Field Research</h2>
             <p>
               My experience working in the water sector, especially with rivers,
               has been both challenging and deeply rewarding. During my Master's
