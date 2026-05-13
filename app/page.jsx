@@ -5,7 +5,7 @@ const personJsonLd = {
   "@type": "Person",
   name: "Somy Bhattarai",
   url: "https://somybhattarai.com.np",
-  image: "https://somybhattarai.com.np/profile.jpg",
+  image: "https://somybhattarai.com.np/profile.webp",
   email: "mailto:somybhattarai650@gmail.com",
   jobTitle: "Aspiring Researcher in Water, Climate & Disaster Resilience",
   sameAs: ["https://www.linkedin.com/in/somy-bhattarai-6313b01ab/"],

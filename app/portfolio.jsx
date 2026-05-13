@@ -10,7 +10,6 @@ const navItems = [
   ["Services", "#services"],
   ["Awards", "#awards"],
   ["Publications", "#publications"],
-  ["Field Research", "#field-research"],
   ["Contact", "#contact"]
 ];
 
@@ -70,7 +69,7 @@ const skills = [
   "Statistical Analysis",
   "Technical Writing",
   "Critical Thinking and Problem Solving",
-  "Presentation and Communication"
+  "Presentation and Communication Skills"
 ];
 
 const publications = [
@@ -87,32 +86,6 @@ const publications = [
   ],
   ["2024", "Loss and Damage in the Everest Region", "Digo Bikas Institute"],
   ["2024", "Virtual Reality Classroom", "UNDRR"]
-];
-
-const reflections = [
-  {
-    label: "River Field Research",
-    title: "Wai Wai, sand dust, and water samples.",
-    wide: true,
-    paragraphs: [
-      "During my Master's thesis in 2024, my friends and I walked long stretches along the Arun and Tamor rivers with sample bottles, heavy instruments, and empty stomachs. The work was physically demanding, but it taught me the realities of field research.",
-      "Hot riverbanks, risky gravel roads, monsoon travel, limited lab supplies, and long data-analysis sessions turned the project into a full test of patience, teamwork, and problem-solving. Somehow, all of it led to my first Bhattarai et al."
-    ]
-  },
-  {
-    label: "Fear & Future",
-    title: "Finding my voice.",
-    paragraphs: [
-      "I do not usually raise my hand first, but that does not mean I do not try. I enjoy sharing ideas, advocating for meaningful work, listening to communities, and slowly building the knowledge and experience to speak with purpose."
-    ]
-  },
-  {
-    label: "The Trek That Felt Impossible",
-    title: "Every step is progress.",
-    paragraphs: [
-      "In 2025, my team trekked to Kori and Kapuche at around 3800 meters. By the second day, every step felt heavy. With my team's support, I kept moving and made it. That trek still reminds me that slow progress is still progress."
-    ]
-  }
 ];
 
 function useLoopingTypewriter(text, options = {}) {
@@ -270,11 +243,18 @@ export default function Portfolio() {
           }
         });
       },
-      { threshold: 0.16 }
+      { rootMargin: "0px 0px 12% 0px", threshold: 0.01 }
     );
 
     document.querySelectorAll("[data-reveal]").forEach((item, index) => {
       item.style.setProperty("--delay", `${Math.min(index * 32, 220)}ms`);
+      const rect = item.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        item.classList.add("is-visible");
+        return;
+      }
+
       observer.observe(item);
     });
 
@@ -288,15 +268,15 @@ export default function Portfolio() {
       <main id="home">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy reveal" data-effect="slide-right" data-reveal>
-            <p className="eyebrow">Water, Climate & Disaster Resilience</p>
             <h1 id="hero-title">Somy Bhattarai</h1>
             <p className="hero-kicker">
               In a slightly chaotic journey to earn that "Dr." before my name.
             </p>
             <Typewriter />
             <p className="hero-lede">
-              Environmental Science graduate focused on research that moves
-              beyond identifying problems and toward actionable solutions.
+              Environmental Science graduate interested in water, climate, and
+              disaster management, with a soft spot for research that becomes
+              useful in the real world.
             </p>
             <div className="hero-actions" aria-label="Primary actions">
               <a className="button primary" href="#profile">
@@ -353,22 +333,38 @@ export default function Portfolio() {
           <div className="profile-grid">
             <article className="profile-card large reveal" data-effect="fade-up" data-reveal>
               <p>
-                I am particularly drawn to work that develops actionable
-                solutions. I believe research should not only inform, but also
-                inspire change and improve lives.
+                I am an Environmental Science graduate with a strong interest
+                in water, climate, and disaster management. I am passionate
+                about work that creates real impact and helps build a more
+                sustainable and resilient future.
               </p>
               <p>
-                I enjoy exploring ideas, learning through experience, staying
-                proactive, and approaching work with purpose. In short, I want
-                to learn, grow, create, and leave things a little better than I
-                found them.
+                I am particularly drawn to work that goes beyond identifying
+                "problems" and focuses on developing actionable "solutions". I
+                believe research should not only inform but also inspire change
+                and improve lives.
               </p>
-            </article>
-            <article className="profile-card reveal" data-effect="tilt-in" data-reveal>
-              <h3>How I Work</h3>
               <p>
-                I like balance, though I am still figuring that out. I can do
-                many things and I am working on becoming a master of a few.
+                I enjoy learning new things, exploring ideas, and growing
+                through my experiences. I like to stay organized, be proactive,
+                and approach my work with purpose.
+              </p>
+              <p>
+                As a person, I am curious, motivated, and easygoing. I try to
+                find a good balance between work, responsibilities, and enjoying
+                life, even though I am still figuring that out.
+              </p>
+              <p>
+                I see myself as someone who can do many things and is always
+                improving, one step at a time. You can find me on Instagram,
+                LinkedIn, and Facebook, but probably not on TikTok or Snapchat.
+              </p>
+              <p>
+                My goal is simple: to keep learning, keep growing, and leave
+                things a little better than I found them. I like to think of
+                myself as a "jack of many things, master of none", but I am
+                working on becoming a master of a few because that is the
+                demand.
               </p>
             </article>
           </div>
@@ -402,10 +398,39 @@ export default function Portfolio() {
           </div>
           <div className="feature-content">
             <p className="eyebrow">Water Sector</p>
-            <h2>Fieldwork taught me what no classroom could.</h2>
+            <h2>Reflections from River Field Research</h2>
             <p>
-              Long walks along rivers, water sample bottles, limited lab
-              supplies, and data-analysis marathons made the research real.
+              My experience working in the water sector, especially with rivers,
+              has been both challenging and deeply rewarding. During my Master's
+              thesis in 2024, my friends and I had to travel long distances,
+              walking up and down along the Arun and Tamor River with bottles
+              of water samples and empty stomachs. The river water could not
+              help us, but it taught us the realities of field research.
+            </p>
+            <p>
+              Collecting samples was physically demanding. We carried heavy
+              instruments, stayed on hot riverbanks with Wai Wai and sand dust,
+              waded into the water to gather samples, and walked off-road
+              through risky gravel roads that were even worse during monsoon.
+              Every step required careful planning and teamwork, and despite the
+              fatigue, the hands-on experience taught me lessons no classroom
+              ever could. Who knew fieldwork could feel like an extreme sport?
+            </p>
+            <p>
+              Back at the lab, the challenges continued. We spent hours managing
+              limited chemicals and equipment, sometimes fighting with
+              colleagues, and carefully analyzing our samples, which honestly I
+              did not enjoy much. Then came data analysis, another mental
+              marathon, but it gave meaning to all the effort we had put into
+              the field.
+            </p>
+            <p>
+              Overall, working in the water sector is not easy. It tests
+              patience, endurance, and problem-solving skills. The combination
+              of fieldwork, lab experiments, and data analysis gave me a deep
+              appreciation for research, teamwork, and the real-world impact
+              careful water management can have on communities and ecosystems.
+              All of this helped me meet my first Bhattarai et al.
             </p>
           </div>
         </section>
@@ -461,7 +486,6 @@ export default function Portfolio() {
 
           <div className="skills-panel reveal" data-effect="scale-in" data-reveal>
             <p className="eyebrow">Skills</p>
-            <h2>Tools I am building.</h2>
             <ul className="skill-tags">
               {skills.map((skill) => (
                 <li key={skill}>{skill}</li>
@@ -508,31 +532,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section className="section reflections-section" id="field-research" aria-labelledby="field-title">
-          <div className="section-heading reveal" data-effect="slide-right" data-reveal>
-            <p className="eyebrow">Field Research</p>
-            <h2 id="field-title">Reflections from the field and beyond.</h2>
-          </div>
-
-          <div className="reflection-list">
-            {reflections.map((item) => (
-              <article
-                className={`reflection-card reveal${item.wide ? " wide" : ""}`}
-                data-effect={item.wide ? "fade-up" : "tilt-in"}
-                data-reveal
-                key={item.title}
-              >
-                <span>{item.label}</span>
-                <h3>{item.title}</h3>
-                {item.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="contact reveal" id="contact" data-effect="scale-in" data-reveal aria-labelledby="contact-title">
+        <section className="contact" id="contact" aria-labelledby="contact-title">
           <div>
             <p className="eyebrow">Contact</p>
             <h2 id="contact-title">Let us talk water, climate, and resilience.</h2>
@@ -546,7 +546,7 @@ export default function Portfolio() {
               Email Somy
             </a>
             <a
-              className="button secondary"
+              className="button secondary linkedin-button"
               href="https://www.linkedin.com/in/somy-bhattarai-6313b01ab/"
               target="_blank"
               rel="noreferrer"

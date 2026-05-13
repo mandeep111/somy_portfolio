@@ -40,7 +40,7 @@ export const metadata = {
     description,
     images: [
       {
-        url: "/profile.jpg",
+        url: "/profile.webp",
         width: 1070,
         height: 803,
         alt: "Somy Bhattarai near a bridge at sunset"
@@ -51,7 +51,7 @@ export const metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/profile.jpg"]
+    images: ["/profile.webp"]
   },
   robots: {
     index: true,

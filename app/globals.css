@@ -80,10 +80,11 @@ h1 {
 
 h2 {
   margin-bottom: 18px;
-  max-width: 13ch;
-  padding: 0.08em 0 0.12em;
+  max-width: 16ch;
+  overflow: visible;
+  padding: 0.16em 0 0.2em;
   font-size: clamp(2.35rem, 5.3vw, 5.2rem);
-  line-height: 0.98;
+  line-height: 1.08;
 }
 
 h3 {
@@ -345,6 +346,18 @@ h3 {
   background: rgba(255, 255, 255, 0.76);
 }
 
+.linkedin-button {
+  position: relative;
+  transform-origin: center;
+}
+
+.linkedin-button:hover,
+.linkedin-button:focus-visible {
+  animation: linkedinPop 420ms cubic-bezier(0.18, 0.9, 0.28, 1.25);
+  border-color: rgba(47, 111, 70, 0.38);
+  background: var(--white);
+}
+
 .hero-media {
   position: relative;
   min-height: 650px;
@@ -464,7 +477,7 @@ section[id] {
 
 .profile-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
@@ -513,14 +526,14 @@ section[id] {
 .profile-card.large {
   display: grid;
   align-content: center;
-  min-height: 360px;
+  min-height: 0;
   background:
     linear-gradient(135deg, rgba(129, 199, 132, 0.26), rgba(255, 255, 255, 0.75)),
     var(--white);
 }
 
 .profile-card.large p {
-  max-width: 720px;
+  max-width: 920px;
   font-size: clamp(1.08rem, 2vw, 1.24rem);
 }
 
@@ -599,8 +612,12 @@ section[id] {
 
 .feature-content {
   align-self: center;
-  max-width: 650px;
+  max-width: 760px;
   padding: 72px max(18px, calc((100vw - 1220px) / 2)) 72px 74px;
+}
+
+.feature-content p {
+  margin-bottom: 18px;
 }
 
 .experience-grid,
@@ -675,7 +692,7 @@ section[id] {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 34px 0 0;
+  margin: 10px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -861,6 +878,20 @@ section[id] {
   }
 }
 
+@keyframes linkedinPop {
+  0% {
+    transform: translateY(-3px) scale(1);
+  }
+
+  48% {
+    transform: translateY(-5px) scale(1.08);
+  }
+
+  100% {
+    transform: translateY(-3px) scale(1);
+  }
+}
+
 @media (max-width: 1100px) {
   .site-header {
     align-items: center;
@@ -1008,6 +1039,10 @@ section[id] {
   }
 
   .profile-card.large {
+    min-height: 0;
+  }
+
+  .profile-quote {
     min-height: 0;
   }
 
