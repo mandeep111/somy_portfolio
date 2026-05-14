@@ -530,6 +530,57 @@ export default function Portfolio() {
           </div>
         </section>
 
+        <section className="trek-section reveal" data-effect="fade-up" data-reveal aria-labelledby="trek-title">
+          <div className="trek-left">
+            <div className="trek-intro">
+              <p className="eyebrow">Trek Reflection</p>
+              <h2 id="trek-title">The Trek That Felt Impossible</h2>
+            </div>
+            <div className="trek-image">
+              <Image
+                src="/trek.webp"
+                alt="Somy Bhattarai outdoors during a challenging journey"
+                fill
+                sizes="(max-width: 640px) 100vw, 42vw"
+              />
+            </div>
+          </div>
+          <div className="trek-content">
+            <p>
+              In 2025, my team planned a trek to Kori and Kapuche, reaching
+              elevations of around 3800 meters. It was not considered a
+              particularly difficult trek, and I was confident I could complete
+              it without much trouble.
+            </p>
+            <p>But the mountain had other plans.</p>
+            <p>
+              By the second day, everything changed. Walking became difficult,
+              every step felt heavy, and I seriously thought about turning back.
+              But there was no easy way down, only the path ahead. For the first
+              time in my life, I saw such massive snow. The place was beautiful,
+              quiet, and powerful, but I could barely focus on it because moving
+              forward felt like a challenge in itself.
+            </p>
+            <p>
+              There were moments when I felt completely stuck, physically and
+              mentally. But my team kept encouraging me, step by step. With
+              their support, I kept going, even when it felt impossible. And
+              somehow, I made it.
+            </p>
+            <p>
+              It was not the longest or toughest journey in the world, but for
+              me, it meant something deeper. It taught me that even when things
+              feel overwhelming, continuing forward, no matter how slowly, still
+              leads you somewhere.
+            </p>
+            <p>
+              That trek stays with me as a reminder: if I could push through
+              that, I can push through many other things too. Every setback has
+              shaped me, every step is progress, and I am not done yet.
+            </p>
+          </div>
+        </section>
+
         <section className="contact" id="contact" aria-labelledby="contact-title">
           <div>
             <p className="eyebrow">Contact</p>
