@@ -76,6 +76,7 @@ const publications = [
   [
     "2026",
     "Chemical Characterization and Spatial Distribution of Microplastics in the Surface Water",
+    "Water Air and Soil Pollution",
     ""
   ],
   ["2025", "How Sand Mining is Shaping the Trishuli River", "Earth Systems & Environment"],
@@ -275,8 +276,7 @@ export default function Portfolio() {
             <Typewriter />
             <p className="hero-lede">
               Environmental Science graduate interested in water, climate, and
-              disaster management, with a soft spot for research that becomes
-              useful in the real world.
+              disaster management.
             </p>
             <div className="hero-actions" aria-label="Primary actions">
               <a className="button primary" href="#profile">
@@ -312,8 +312,7 @@ export default function Portfolio() {
           aria-label="Personal summary"
         >
           <p>
-            Curious, motivated, easygoing, organized, and always learning one
-            step at a time.
+            Curious, motivated, proactive, organized, and always eager to learn.
           </p>
           <a href="#publications">View publications</a>
         </section>
@@ -322,10 +321,10 @@ export default function Portfolio() {
           <div className="profile-heading-row">
             <div className="section-heading reveal" data-effect="slide-left" data-reveal>
               <p className="eyebrow">Profile</p>
-              <h2 id="profile-title">Purposeful research, practical change.</h2>
+              <h2 id="profile-title">Purposeful research, practical output.</h2>
             </div>
             <aside className="quote-card profile-quote reveal" data-effect="tilt-in" data-reveal>
-              <h3>Quote</h3>
+              <h3>Favorite Quote</h3>
               <QuoteTypewriter />
             </aside>
           </div>
