@@ -35,7 +35,7 @@ const experience = [
   {
     label: "Research Assistant",
     title: "Climate Risk & Resilience Lab",
-    text: "Supporting environmental research, risk communication, and resilience-focused work."
+    text: "Supporting innovative risk communication, and resilience-focused work."
   },
   {
     label: "Field Research Assistant",
@@ -275,8 +275,8 @@ export default function Portfolio() {
             </p>
             <Typewriter />
             <p className="hero-lede">
-              Environmental Science graduate interested in water, climate, and
-              disaster management.
+              Environmental Science graduate blending lab, laptop, and local actions to grow expertise in water,
+              climate, and disaster resilience.
             </p>
             <div className="hero-actions" aria-label="Primary actions">
               <a className="button primary" href="#profile">
@@ -333,37 +333,37 @@ export default function Portfolio() {
             <article className="profile-card large reveal" data-effect="fade-up" data-reveal>
               <p>
                 I am an Environmental Science graduate with a strong interest
-                in water, climate, and disaster management. I am passionate
-                about work that creates real impact and helps build a more
-                sustainable and resilient future.
+                in water, climate, and disaster management, driven to contribute to a more
+                sustainable and resilient future. My focus lies in work that creates tangible impact,
+                where ideas move beyond theory and translate into meaningful change.
               </p>
               <p>
-                I am particularly drawn to work that goes beyond identifying
-                "problems" and focuses on developing actionable "solutions". I
-                believe research should not only inform but also inspire change
-                and improve lives.
+                I am particularly drawn to solution-oriented approaches.
+                While understanding problems is essential, the real value of research lies
+                in developing practical, actionable strategies that improve lives and
+                support long-term sustainability.
               </p>
               <p>
-                I enjoy learning new things, exploring ideas, and growing
-                through my experiences. I like to stay organized, be proactive,
-                and approach my work with purpose.
+                Curiosity plays a big role in how I approach both learning and work. I enjoy
+                exploring new ideas, building knowledge across different areas, and continuously growing
+                through experience. I also value being organized and proactive, approaching tasks with
+                honesty, clarity, structure, and purpose.
               </p>
               <p>
-                As a person, I am curious, motivated, and easygoing. I try to
-                find a good balance between work, responsibilities, and enjoying
-                life, even though I am still figuring that out.
+                As a person, I would describe myself as motivated, adaptable, and
+                easygoing. I aim to maintain a healthy balance between “work”,
+                “responsibilities,” and “enjoying” the process along the way,
+                even as I continue to figure that out.
               </p>
               <p>
-                I see myself as someone who can do many things and is always
-                improving, one step at a time. You can find me on Instagram,
-                LinkedIn, and Facebook, but probably not on TikTok or Snapchat.
+                I see myself as someone with a wide range of interests and
+                capabilities, steadily refining them over time. A “jack of many
+                things” for now, but intentionally working toward mastering a
+                few areas that truly matter.
               </p>
               <p>
-                My goal is simple: to keep learning, keep growing, and leave
-                things a little better than I found them. I like to think of
-                myself as a "jack of many things, master of none", but I am
-                working on becoming a master of a few because that is the
-                demand.
+                Outside of work, you’ll likely find me on platforms like LinkedIn, Instagram, or Facebook.
+                At the core, my goal is simple: to keep learning, keep evolving, and leave things a little better than I found them.
               </p>
             </article>
           </div>
@@ -607,7 +607,7 @@ export default function Portfolio() {
       </main>
 
       <footer className="site-footer">
-        <p>&copy; 2026 Somy Bhattarai. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Somy Bhattarai. All rights reserved.</p>
         <a href="#home">Back to top</a>
       </footer>
     </>

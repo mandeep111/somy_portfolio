@@ -74,7 +74,7 @@ h3 {
 h1 {
   margin-bottom: 16px;
   max-width: 8ch;
-  font-size: clamp(4.2rem, 8.6vw, 8.8rem);
+  font-size: clamp(4.2rem, 8.6vw, 8.1rem);
   line-height: 0.88;
 }
 
@@ -815,7 +815,7 @@ section[id] {
   line-height: 1.64;
 }
 
-.trek-content p + p {
+.trek-content p+p {
   margin-top: 18px;
 }
 
@@ -905,6 +905,7 @@ section[id] {
 }
 
 @keyframes blink {
+
   0%,
   45% {
     opacity: 1;
