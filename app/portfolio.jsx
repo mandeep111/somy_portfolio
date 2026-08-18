@@ -270,9 +270,9 @@ export default function Portfolio() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy reveal" data-effect="slide-right" data-reveal>
             <h1 id="hero-title">Somy Bhattarai</h1>
-            <p className="hero-kicker">
+            {/* <p className="hero-kicker">
               In a slightly chaotic journey to earn that "Dr." before my name.
-            </p>
+            </p> */}
             <Typewriter />
             <p className="hero-lede">
               Environmental Science graduate blending lab, laptop, and local actions to grow expertise in water,
@@ -423,7 +423,7 @@ export default function Portfolio() {
               the field.
             </p>
             <p>
-              Overall, working in the water sector is not easy. It tests
+              Hence, working in the water sector is not easy. It tests
               patience, endurance, and problem-solving skills. The combination
               of fieldwork, lab experiments, and data analysis gave me a deep
               appreciation for research, teamwork, and the real-world impact
